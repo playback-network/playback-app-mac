@@ -1,47 +1,47 @@
+const { ipcRenderer } = require('electron');
 
-import { createClient } from '@supabase/supabase-js';
-
-const SUPABASE_URL = 'your-supabase-url';
-const SUPABASE_KEY = 'your-supabase-key';
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-recognition.interimResults = true;
-recognition.onresult = async (event) => {
-  const transcript = Array.from(event.results)
-    .map(result => result[0])
-    .map(result => result.transcript)
-    .join('');
-
-  document.getElementById('text-box').value = transcript;
-
-  if (event.results[0].isFinal) {
-    await saveTranscript(transcript);
-  }
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.style.cursor = 'auto';
-
-  window.electron.onCommandMode((event, commandMode) => {
-    if (commandMode) {
-      document.body.style.cursor = 'pointer';
-      recognition.start();
-    } else {
-      document.body.style.cursor = 'auto';
-      recognition.stop();
-    }
-  });
+// Display the playback status in the tray menu
+ipcRenderer.on('toggle-playback-mode', (event, isPlaying) => {
+    const status = document.getElementById('playback-status');
+    status.textContent = `Playback is ${isPlaying ? 'ON' : 'OFF'}`;
+    document.body.classList.toggle('playback-mode', isPlaying);  // Toggle playback mode class
 });
 
-async function saveTranscript(transcript) {
-  const { data, error } = await supabase
-    .from('transcripts')
-    .insert([{ text: transcript }]);
+// Exit playback mode and hide the window when pressing Escape
+ipcRenderer.on('exit-playback-mode', () => {
+    ipcRenderer.send('toggle-playback-mode', false);
+});
 
-  if (error) {
-    console.error('Error saving transcript:', error);
-  } else {
-    console.log('Transcript saved:', data);
-  }
-}
+// Edit the keyboard shortcut
+ipcRenderer.on('edit-shortcut', (event, currentShortcut) => {
+    const shortcutInput = document.getElementById('shortcut');
+    shortcutInput.value = currentShortcut;
+    shortcutInput.focus();
+});
+
+// Handle shortcut feedback
+ipcRenderer.on('shortcut-feedback', (event, message) => {
+    const feedback = document.getElementById('shortcut-feedback');
+    feedback.textContent = message;
+});
+
+// Update transcription text
+ipcRenderer.on('transcription-update', (event, transcript) => {
+    const transcriptionText = document.getElementById('transcription-text');
+    transcriptionText.textContent += ` ${transcript}`;
+});
+
+document.getElementById('set-shortcut').addEventListener('click', () => {
+    const newShortcut = document.getElementById('shortcut').value;
+    if (newShortcut) {
+        ipcRenderer.send('update-shortcut', newShortcut);
+    }
+});
+
+ipcRenderer.on('add-mouse-pointer-effect', () => {
+    document.body.classList.add('playback-mode');
+});
+
+ipcRenderer.on('remove-mouse-pointer-effect', () => {
+    document.body.classList.remove('playback-mode');
+});

@@ -1,14 +1,25 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Voice to Text</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playback</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <textarea id="text-box" placeholder="Transcription will appear here..."></textarea>
-  </div>
-  <script src="renderer.js"></script>
+    <div id="transcription-banner" style="display: none;">
+        <div id="transcription-text">Transcription will appear here...</div>
+    </div>
+    <div id="playback-status">Playback is OFF</div>
+    <div id="shortcut-input">
+        <label for="shortcut">Keyboard shortcut to start Playback:</label>
+        <input type="text" id="shortcut" placeholder="e.g., Ctrl+Shift+P">
+        <button id="set-shortcut">Save</button>
+        <div id="shortcut-feedback"></div>
+    </div>
+    <div id="playback-logo">
+        <img src="icon.png" alt="Playback Logo" width="100">
+    </div>
+    <script src="renderer.js"></script>
 </body>
 </html>

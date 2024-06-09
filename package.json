@@ -1,18 +1,14 @@
-
 {
-  "name": "playback-electron",
-  "version": "1.0.0",
-  "description": "An Electron menu bar app with voice-to-text transcription.",
+  "name": "Playback",
+  "version": "0.0.1",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "dependencies": {
-    "electron": "^24.0.0",
-    "@supabase/supabase-js": "^1.0.0"
-  },
-  "devDependencies": {},
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "author": "Playback",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.0"
+  }
 }
