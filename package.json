@@ -1,0 +1,16 @@
+{
+  "name": "ryan-electron-app",
+  "version": "1.0.0",
+  "description": "An Electron menu bar app with voice-to-text transcription.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^24.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

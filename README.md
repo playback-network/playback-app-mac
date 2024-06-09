@@ -1,32 +1,40 @@
-# macOS Menubar App with Electron and Python API Integration
+# Playback - Electron
+
+Built for Build Together Hackathon 20240608
 
 ## Overview
 
-Hey everyone,
+I am building a macOS menubar app using Electron that can capture screenshots and process them through a Python API. The goal is to make screenshots accessible for blind individuals.
 
-I need a macOS menubar app built with Electron that can capture screenshots and process them through a Python API. This app will make screenshots accessible for blind individuals.
+## Key Features
 
-## Key Requirements
-
-- **Menubar App**: Build a menubar app for macOS using Electron.
-- **Screenshot Capture**: Add a feature to capture screenshots.
-- **Python API Integration**: Send images to a Python API for processing.
-- **Accessibility**: Ensure full accessibility for blind users, including:
+- **Menubar App**: A menubar app for macOS built using Electron.
+- **Screenshot Capture**: A feature to capture screenshots.
+- **Python API Integration**: Sends images to a Python API for processing.
+- **Accessibility**: Ensures full accessibility for blind users, including:
   - Keyboard navigation
   - Voice commands
 
-## Additional Features
+## Additional Features (after hackathon)
 
-- More features to be confirmed (TBC).
+- Double tap control to activate playback
+- Change my credit to Green when playback is activated
+- Show playback thoughts in panel
+- When you click the playback menu, have keyboard shortcuts to sticky playback menu
 
-## What I'm Looking For
+## Getting Started
 
-- **Experience with Electron**: Experience in building macOS desktop apps with Electron.
-- **Python API Integration**: Strong skills in integrating and communicating with Python APIs.
-- **Accessibility Best Practices**: Knowledge and implementation of accessibility best practices.
-- **User Experience Focus**: Emphasis on delivering a seamless and intuitive user experience.
+1. Clone the repo
 
-## Get Started
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the application:
+    ```bash
+    npm start
+    ```
 
 I want to get started ASAP. Please join this call if possible or DM me ASAP.
 
