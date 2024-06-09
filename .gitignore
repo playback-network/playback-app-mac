@@ -1,0 +1,83 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore virtual environments
+env/
+venv/
+ENV/
+.VENV/
+.venv/
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Ignore package management files
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ignore test coverage results
+coverage/
+*.cover
+*.coverage
+*.cov
+.nyc_output/
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
+*.manifest
+*.spec
+target/
+
+# Ignore compiled source files
+*.o
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore personal files
+*.swp
+*.swo
+
+# Ignore hidden files
+.*.swp
+
+# Include release builds in the repository
+!release/
+!release/*
+
+# Make sure not to ignore icons
+!icons/
+!icons/**
+
+# Ensure key project source files are not ignored
+!src/
+!src/**
+!assets/
+!assets/**
+
