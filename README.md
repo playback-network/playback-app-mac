@@ -4,12 +4,12 @@ Built for Build Together Hackathon 20240608
 
 ## Overview
 
-I am building a macOS menubar app using Electron that can capture screenshots and process them through a Python API. The goal is to make screenshots accessible for blind individuals.
+This project is a macOS menubar app built using Electron that captures screenshots and processes them through a Python API. The goal is to make screenshots accessible for blind individuals.
 
 ## Key Features
 
 - **Menubar App**: A menubar app for macOS built using Electron.
-- **Screenshot Capture**: A feature to capture screenshots.
+- **Screenshot Capture**: Capture screenshots with ease.
 - **Python API Integration**: Sends images to a Python API for processing.
 - **Accessibility**: Ensures full accessibility for blind users, including:
   - Keyboard navigation
@@ -18,16 +18,16 @@ I am building a macOS menubar app using Electron that can capture screenshots an
 ## Additional Features (after hackathon)
 
 - Double tap control to activate playback
-- Change my credit to Green when playback is activated
-- Show playback thoughts in panel
-- When you click the playback menu, have keyboard shortcuts to sticky playback menu
+- Change the icon to green when playback is activated
+- Show playback thoughts in a panel
+- Keyboard shortcuts to make the playback menu sticky
 
 ## Getting Started
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/ryan-electron-app.git
-    cd ryan-electron-app
+    git clone https://github.com/alxcnwy/playback_electron.git
+    cd playback_electron
     ```
 
 2. **Install the dependencies**:
@@ -55,8 +55,8 @@ For M1 Mac users, follow these steps to ensure compatibility:
 
 3. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/ryan-electron-app.git
-    cd ryan-electron-app
+    git clone https://github.com/alxcnwy/playback_electron.git
+    cd playback_electron
     ```
 
 4. **Install the dependencies**:
@@ -68,6 +68,8 @@ For M1 Mac users, follow these steps to ensure compatibility:
     ```bash
     npm start
     ```
+
+## Join the Discussion
 
 I want to get started ASAP. Please join this call if possible or DM me ASAP.
 
