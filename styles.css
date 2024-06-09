@@ -26,36 +26,15 @@ body {
     margin: 10px;
 }
 
-#shortcut-input {
-    text-align: center;
-    margin-top: 10px;
+#soundwave-container {
+    margin-top: 20px;
 }
 
-#shortcut-feedback {
-    color: red;
-    margin-top: 10px;
-}
-
-input, button {
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #555;
-}
-
-input {
-    background-color: #555;
-    color: #fff;
-}
-
-button {
-    background-color: #666;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #777;
+#soundwave {
+    width: 100px;
+    height: 100px;
+    background: url('soundwave.gif') no-repeat center center;
+    background-size: contain;
 }
 
 .playback-mode {
@@ -84,4 +63,18 @@ body.playback-mode::after {
 
 #playback-logo {
     margin-top: 20px;
+}
+
+#popup-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+#popup-message {
+    margin-top: 10px;
+    font-size: 16px;
 }

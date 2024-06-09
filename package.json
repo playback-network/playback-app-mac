@@ -1,14 +1,12 @@
 {
   "name": "Playback",
   "version": "0.0.1",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Playback",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^12.0.0"
+  "dependencies": {
+    "electron": "^13.1.7",
+    "electron-store": "^8.0.1"
   }
 }
