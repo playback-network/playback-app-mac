@@ -1,5 +1,6 @@
+
 {
-  "name": "ryan-electron-app",
+  "name": "playback-electron",
   "version": "1.0.0",
   "description": "An Electron menu bar app with voice-to-text transcription.",
   "main": "main.js",
@@ -7,7 +8,8 @@
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^24.0.0"
+    "electron": "^24.0.0",
+    "@supabase/supabase-js": "^1.0.0"
   },
   "devDependencies": {},
   "keywords": [],

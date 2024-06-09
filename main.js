@@ -1,8 +1,10 @@
-const { app, BrowserWindow, Tray, Menu, ipcMain } = require('electron');
+
+const { app, BrowserWindow, Tray, Menu, ipcMain, globalShortcut } = require('electron');
 const path = require('path');
 
 let tray = null;
 let window = null;
+let commandMode = false;
 
 app.on('ready', () => {
   tray = new Tray(path.join(__dirname, 'icon.png'));
@@ -19,6 +21,7 @@ app.on('ready', () => {
   });
 
   createWindow();
+  registerShortcuts();
 });
 
 function createWindow() {
@@ -40,4 +43,24 @@ function createWindow() {
   window.on('blur', () => {
     window.hide();
   });
+}
+
+function registerShortcuts() {
+  let commandKeyPressedTimes = 0;
+  globalShortcut.register('Command', () => {
+    commandKeyPressedTimes++;
+    if (commandKeyPressedTimes === 2) {
+      toggleCommandMode();
+      commandKeyPressedTimes = 0;
+    }
+    setTimeout(() => {
+      commandKeyPressedTimes = 0;
+    }, 300); // reset count after 300ms
+  });
+}
+
+function toggleCommandMode() {
+  commandMode = !commandMode;
+  tray.setImage(commandMode ? path.join(__dirname, 'icon-green.png') : path.join(__dirname, 'icon.png'));
+  window.webContents.send('command-mode', commandMode);
 }

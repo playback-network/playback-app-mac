@@ -24,14 +24,47 @@ I am building a macOS menubar app using Electron that can capture screenshots an
 
 ## Getting Started
 
-1. Clone the repo
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/ryan-electron-app.git
+    cd ryan-electron-app
+    ```
 
-2. Install the dependencies:
+2. **Install the dependencies**:
     ```bash
     npm install
     ```
 
-3. Start the application:
+3. **Start the application**:
+    ```bash
+    npm start
+    ```
+
+### Running on M1 Mac
+For M1 Mac users, follow these steps to ensure compatibility:
+
+1. **Install Homebrew (if not already installed)**:
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+2. **Install Node.js via Homebrew**:
+    ```bash
+    brew install node
+    ```
+
+3. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/ryan-electron-app.git
+    cd ryan-electron-app
+    ```
+
+4. **Install the dependencies**:
+    ```bash
+    npm install
+    ```
+
+5. **Start the application**:
     ```bash
     npm start
     ```
