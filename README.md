@@ -51,7 +51,7 @@ https://ethglobal.com/showcase/playback-network-xrqtm
 
 https://x.com/playbacknet
 
-Built for ETHGlobal HackFS then the Build Together Hackathons 2024.
+Built for ETHGlobal HackFS then the Build Together and OnChain Summer Hackathons 2024.
 
 
 ⚠️ WARNING: v0.0.1 - very experimental
