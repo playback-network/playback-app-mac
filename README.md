@@ -1,15 +1,5 @@
 # Playback █████
 
-Built for ETHGlobal HackFS then the Build Together Hackathons 2024.
-
-
-⚠️ WARNING: v0.0.1 - very experimental
-
-Here be dragons... 
-
-🐲
-
-
 ```
 █████████████████████████████████████████████████████████████████████████████████████████████
 ██████████████████████████▓░░░░░░░░░░░░░░░░░░▒▒▒░░░░░░░░░░░░░▒███████████████████████████████
@@ -50,6 +40,28 @@ Here be dragons...
 
 ```
 
+
+## Overview
+
+Playback is decentralized, federated, zero-knowledge ai agent.
+
+https://playback.network
+
+https://ethglobal.com/showcase/playback-network-xrqtm
+
+https://x.com/playbacknet
+
+Built for ETHGlobal HackFS then the Build Together Hackathons 2024.
+
+
+⚠️ WARNING: v0.0.1 - very experimental
+
+Here be dragons... 
+
+🐲
+
+
+## Directory Structure
 ```
 app/
 ├── icon-green.png
@@ -64,15 +76,6 @@ app/
 ├── styles.css
 ```
 
-## Overview
-
-We are building a decentralized large action model. 
-
-https://playback.network
-
-https://ethglobal.com/showcase/playback-network-xrqtm
-
-https://x.com/playbacknet
 
 ## Key Features
 
@@ -108,8 +111,7 @@ https://x.com/playbacknet
     npm start
     ```
 
-### Running on M1 Mac
-For M1 Mac users, follow these steps to ensure compatibility:
+### Running on Apple Silicon
 
 1. **Install Homebrew (if not already installed)**:
     ```bash
@@ -139,12 +141,8 @@ For M1 Mac users, follow these steps to ensure compatibility:
 
 ## Join the Discussion
 
-(Follow and chat to us on X)[https://x.com/playbacknet]
+[Follow and chat to us on X](https://x.com/playbacknet)
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features to add.
-
-## License
-
-This project is licensed under the MIT License.vv
